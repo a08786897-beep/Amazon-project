@@ -64,6 +64,25 @@
     grid-template-columns: 1fr;
   }
 }
+.Sign-in{
+  text-decoration: none;
+}
+.sign-amazon{
+    height: 40px;
+}
+.sign-amazon:hover{
+  border: 1px solid #ffffff;
+}
+.sign-text1{
+  padding: 6px 5px 0 5px;
+  color: #ffffff;
+  font-size: 12px;
+}
+.sign-text2{
+  padding: 0 1px 3px 2px;
+  color: #ffffff;
+  font-size: 14px;
+}
 
 .product-container {
   padding-top: 40px;
@@ -153,4 +172,36 @@
   width: 100%;
   padding: 8px;
   border-radius: 50px;
+}
+footer{
+    margin-top: 25px;
+}
+.footer-panel1{
+    height: 40px;
+    color: #ffffff;
+    background-color: #37475A;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.85rem;
+
+}
+.footer-panel2 a{
+    display: block;
+    font-size: 0.5rem;
+    margin-top: 5px;
+}
+.footer-panel2{
+    height: 150px;
+    background-color: #0f1111;
+    font-size: 0.85rem;
+    display: flex;
+    justify-content: space-evenly;
+    color: white;
+    border-bottom: 0.86px solid white;
+}
+.footer-panel5{
+    background-color: #0f1111;
+    color: white;
+    text-align: center;
 }
