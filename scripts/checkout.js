@@ -5,6 +5,7 @@ import dayjs from "https://unpkg.com/supersimpledev@8.5.0/dayjs/esm/index.js";
 import { delivaryoption } from '../data/delivaryoptions.js';
 
 const today = dayjs();
+const todays=today.format('dddd, MMMM D ');
 const delivarydate = today.add(7, 'days');
 let cartSummeryHTML = '';
 cart.forEach((cartItem) => {
@@ -18,7 +19,7 @@ cart.forEach((cartItem) => {
   cartSummeryHTML +=
     ` <div class="cart-item-container js-cart-item-container-${matchingProduct.id}">
             <div class="delivery-date">
-              Delivery date: Tuesday, June 21
+              Today date: ${todays}
             </div>
 
             <div class="cart-item-details-grid">
