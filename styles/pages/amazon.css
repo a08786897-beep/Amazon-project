@@ -64,15 +64,6 @@
     grid-template-columns: 1fr;
   }
 }
-.Sign-in{
-  text-decoration: none;
-}
-.sign-amazon{
-    height: 40px;
-}
-.sign-amazon:hover{
-  border: 1px solid #ffffff;
-}
 .navHero{
     height: 350px;
     width: 100%;

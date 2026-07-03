@@ -11,7 +11,7 @@ if(!cart){
 }];
 }
 
-function saveTocart(){
+ export function saveTocart(){
   localStorage.setItem('cart',JSON.stringify(cart));
 }
 

@@ -1,4 +1,4 @@
-import { cart, removecart, addTocart, updateQuantity } from '../data/cart.js';
+import { cart, removecart, addTocart,saveTocart, updateQuantity } from '../data/cart.js';
 import { products } from "../data/products.js";
 import { formatcuurancy } from "./utils/money.js";
 import dayjs from "https://unpkg.com/supersimpledev@8.5.0/dayjs/esm/index.js";
@@ -66,12 +66,12 @@ function delivaryOption(matchingProduct,cartItem) {
     const delivarydate = today.add(delivary.delivarydate, 'days');
     const daystring = delivarydate.format('dddd, MMMM D');
     const dayprice = daystring === 0 ? "FREE" : `${formatcuurancy(delivary.priceCents)}-`;
-    const ischecked = delivaryOption.id === cartItem.delivaryOptionId
+    const ischecked = delivaryOption.id === cartItem.delivaryOptionId;
     html +=
       `<div class="delivery-options">
                 <div class="delivery-option">
                   <input type="radio" checked
-                    class="delivery-option-input"
+                    class="delivery-option-input js-option"
                     name="delivery-option-${matchingProduct.id}">
                   <div>
                     <div class="delivery-option-date">
@@ -130,5 +130,10 @@ document.querySelectorAll('.js-save-link')
       quantityLabel.innerHTML = newQuantity;
 
       updateCartQuantity();
+    });
+  });
+  document.querySelectorAll('.js-option').forEach(() =>{
+    document.querySelector('.js-option').addEventListener('click',() =>{
+      saveTocart();
     });
   });

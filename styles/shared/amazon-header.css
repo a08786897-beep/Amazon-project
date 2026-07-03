@@ -33,7 +33,20 @@
   text-decoration: none;
   border: 1px solid rgba(0, 0, 0, 0);
 }
-
+@media(min-width:450px) {
+  .sign-amazon{
+    height: 10px;
+  }
+}
+.Sign-in{
+  text-decoration: none;
+}
+.sign-amazon{
+    height: 40px;
+}
+.sign-amazon:hover{
+  border: 1px solid #ffffff;
+}
 .header-link:hover {
   border: 1px solid white;
 }
@@ -79,7 +92,11 @@
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
 }
-
+@media (maxwidth:500px) {
+  .search-button{
+    display: none;
+  }
+}
 .search-button {
   background-color: rgb(254, 189, 105);
   border: none;
