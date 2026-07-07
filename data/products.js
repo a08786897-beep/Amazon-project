@@ -29,14 +29,32 @@ class Product {
     this.priceCents = productDetails.priceCents;
   }
 
-  getratingUrl(){
+  getratingUrl() {
     return `images/ratings/rating-${this.rating.stars * 10}.png`;
   }
 
-  getPrice(){
+  getPrice() {
     return `$${formatCurrency(this.priceCents)}`;
   }
+
+  extraInfoHTML(){
+    return '';
+  }
 }
+class Clothing extends Product{
+  sizeChartLink;
+
+  constructor(productDetails){
+    super(productDetails);
+    this.sizeChartLink= productDetails.sizeChartLink;
+  }
+
+  extraInfoHTML(){
+    super.extraInfoHTML();
+    return `<a href="${this.sizeChartLink}" target ="-blank">Size Chart</a>`;
+  }
+}
+
 
 export const products = [
   {
@@ -697,6 +715,9 @@ export const products = [
       "mens"
     ]
   }
-].map((productDetails) =>{
+].map((productDetails) => {
+  if(productDetails.type === 'clothing'){
+    return new Clothing(productDetails);
+  }
   return new Product(productDetails);
 });
