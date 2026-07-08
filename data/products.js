@@ -88,7 +88,7 @@ export function loadProducts(fun) {
       }
       return new Product(productDetails);
     });
-    console.log(products);
+    console.log('loading');
 
     fun();
   });
